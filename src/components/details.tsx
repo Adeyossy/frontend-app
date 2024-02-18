@@ -3,14 +3,16 @@ import React, { ChangeEvent } from "react";
 type DetailsProps = { 
   item: Array<string | boolean>;
   onChange: (value: string) => void;
-  position: number
+  position: number;
+  deleteItem: () => void
 }
 
 export default class Details extends React.Component {
   props: DetailsProps = {
     item: ["", false],
     onChange: (value: string): void => {},
-    position: -1
+    position: -1,
+    deleteItem: () => {}
   };
 
   onChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +35,8 @@ export default class Details extends React.Component {
           <div className="app-details-buttons container-fluid">
             <div className="row g-0">
               <div className="col-3 p-1">
-                <button className="app-accent-button p-3">Delete</button>
+                <button className="app-accent-button p-3"
+                onClick={this.props.deleteItem}>Delete</button>
               </div>
               <div className="col-9 p-1">
                 <button className="p-3">Save</button>

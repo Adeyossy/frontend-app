@@ -6,10 +6,16 @@
   box-shadow: var(--app-shadow-default);
 }
 
+.app-list-item p.disabled {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 .app-list-item-toggle {
   width: 24px;
   height: 24px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
+  border: 1px solid var(--app-primary-colour-contrast);
 }
 
 img {

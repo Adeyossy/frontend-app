@@ -4,12 +4,22 @@ import { ListState } from "../types/list";
 import Header from "./widgets/header";
 
 export default class List extends React.Component {
-  props: ListState = {
-    listItems: []
+  props: ListState & {
+    selectItem: (position: number) => void,
+    updateToggle: (position: number) => void,
+    addItem: () => void
+  } = {
+    listItems: [],
+    selectItem: (position: number) => void {},
+    updateToggle: (position: number) => void {},
+    addItem: () => void {}
   };
   
   render(): React.ReactNode {
-    const items = this.props.listItems.map(listItem => <ListItem item={listItem} />);
+    const items = this.props.listItems
+      .map((listItem, index) => <ListItem key={index} item={listItem} 
+        selectItem={this.props.selectItem.bind(this, index)}
+        updateToggle={this.props.updateToggle.bind(this, index)} />);
     return (
       <div className="app-list app-full-height">
         <div className="app-header">
@@ -47,7 +57,8 @@ export default class List extends React.Component {
         <div className="app-list-items">
           {items}
         </div>
-        <div className="app-list-fab text-white d-flex justify-content-center align-items-center">
+        <div className="app-list-fab text-white d-flex justify-content-center align-items-center"
+          onClick={this.props.addItem}>
           <p className="text-shadow">+</p>
         </div>
       </div>
