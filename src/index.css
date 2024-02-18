@@ -1,8 +1,22 @@
+:root {
+  --app-primary-colour: #3556AB;
+  --app-primary-colour-contrast: #071D55;
+  --app-fab-border: #123EB1;
+  --app-primary-button-border: #0D2972;
+  --app-accent-colour: #AB3535;
+  --app-accent-colour-dark: #720D0D;
+  --app-success-colour: #53DA69;
+  --app-success-colour-dark: #49C25D;
+  --app-shadow-default: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  --app-text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+  --app-background-colour: #F3F3F3;
+  --app-ad-background-colour: #CDE53D;
+  --app-ad-background-colour-dark: #9EB031;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +24,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.disabled, :disabled {
+  color: #8D8D8D;
+}
+
+.text-shadow {
+  text-shadow: var(--app-text-shadow);
 }
