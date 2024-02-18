@@ -12,16 +12,20 @@
   --app-background-colour: #F3F3F3;
   --app-ad-background-colour: #CDE53D;
   --app-ad-background-colour-dark: #9EB031;
-  --app-default-padding: 16px;
+  --app-default-padding: 12px;
   --app-border-radius: 6px;
 }
 
 body {
-  background-color: var(--app-background-colour);
+  background-color: white;
   margin: 0;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app-body {
+  background-color: var(--app-background-colour);
 }
 
 header, .app-header {
@@ -32,7 +36,7 @@ header, .app-header {
 }
 
 p, button {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 p {
@@ -46,8 +50,11 @@ button {
   background-color: var(--app-primary-colour);
   padding: var(--app-default-padding);
   border: 2px solid var(--app-primary-button-border); 
-  box-shadow: inset 0px 3px 1px rgba(168, 181, 222, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
+}
+
+button, .app-list-fab {
+  box-shadow: inset 0px 3px 1px rgba(168, 181, 222, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 button.app-accent-button {

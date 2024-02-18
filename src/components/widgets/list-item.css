@@ -1,14 +1,14 @@
 .app-list-item {
   background-color: white;
   border: 1px solid #e7e7e7;
-  padding: var(--app-default-padding);
+  padding: 8px;
   border-radius: var(--app-border-radius);
   box-shadow: var(--app-shadow-default);
 }
 
 .app-list-item-toggle {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   /* border-radius: 50%; */
 }
 
