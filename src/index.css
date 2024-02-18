@@ -24,6 +24,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input {
+  border-radius: var(--app-border-radius);
+  border: 2px solid #CBCBCB;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 .app-body {
   background-color: var(--app-background-colour);
 }

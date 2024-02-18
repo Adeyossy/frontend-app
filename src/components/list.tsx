@@ -4,16 +4,12 @@ import { ListState } from "../types/list";
 import Header from "./widgets/header";
 
 export default class List extends React.Component {
-  state: ListState = {
-    listItems: [
-      ["Training at the Gym", true],
-      ["Play Paddle with friends", false],
-      ["Burger BBQ with family", false]
-    ]
+  props: ListState = {
+    listItems: []
   };
-
+  
   render(): React.ReactNode {
-    const items = this.state.listItems.map(listItem => <ListItem item={listItem} />);
+    const items = this.props.listItems.map(listItem => <ListItem item={listItem} />);
     return (
       <div className="app-list app-full-height">
         <div className="app-header">

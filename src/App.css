@@ -59,3 +59,13 @@
 .app-list-fab > p {
   font-size: 24px;
 }
+
+.app-details {
+  position: relative;
+}
+
+.app-details-buttons {
+  position: absolute;
+  bottom: 16px; left: 0; right: 0;
+  margin: auto;
+}
